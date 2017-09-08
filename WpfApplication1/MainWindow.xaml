@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chat Project" Height="350" Width="525"
+        Closing="DataWindow_Closing">
+    
+    <DockPanel LastChildFill="True">
+        
+        <StackPanel DockPanel.Dock="Left">
+            <Label Content="Liste des Chatroom"></Label>
+            <ListBox x:Name="chatRoomList"></ListBox>
+        </StackPanel>
+        
+        
+        
+        
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
+                          
+            <ListBox x:Name="lstPersonnes">
+                
+            </ListBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical">
+            
+            <ListBox x:Name="currentRoomMessages">
+            </ListBox>
+            
+            <TextBox x:Name="composeMessage"></TextBox>
+            
+            <Button x:Name="sendMessage" Click="SendClick">Envoyer</Button>
+        </StackPanel>
+
+    </DockPanel>
+</Window>
